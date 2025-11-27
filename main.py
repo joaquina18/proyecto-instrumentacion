@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import numpy as np
+import os
+
 
 app = Flask(__name__)
 CORS(app)  # ← habilita conexión desde GitHub Pages
@@ -35,4 +37,5 @@ def process_rr():
     })
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000)
+    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+
