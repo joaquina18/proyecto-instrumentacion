@@ -9,7 +9,7 @@ CORS(app)  # ← habilita conexión desde GitHub Pages
 
 @app.route("/")
 def home():
-    return "ECG HRV API is running"
+    return "ECG HRV API is running v2"
 
 @app.route("/process_rr", methods=["POST"])
 def process_rr():
